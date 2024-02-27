@@ -96,10 +96,10 @@ function freeConfig(config, Module) {
     offset += 4;
 
 
-    let keywordsFileLen = Module.lengthBytesUTF8(config.keywordsFile) + 1;
-    let keywordsFileBuffer = Module._malloc(keywordsFileLen);
-    Module.stringToUTF8(config.keywordsFile, keywordsFileBuffer, keywordsFileLen);
-    Module.setValue(ptr + offset, keywordsFileBuffer, 'i8*');
+    let keywordsLen = Module.lengthBytesUTF8(config.keywords) + 1;
+    let keywordsBuffer = Module._malloc(keywordsLen);
+    Module.stringToUTF8(config.keywords, keywordsBuffer, keywordsLen);
+    Module.setValue(ptr + offset, keywordsBuffer, 'i8*');
     offset += 4;
   
     return {
@@ -216,7 +216,13 @@ function freeConfig(config, Module) {
       numTrailingBlanks: 1,
       keywordsScore: 1.0,
       keywordsThreshold: 0.25,
-      keywordsFile: "./keywords.txt"
+      keywords: "x iǎo s ài @小赛\n" +
+          "d ǎ k āi d ì t ú @打开地图\n" +
+          "d ǎ k āi k ōng t iáo @打开空调\n" +
+          "s ài x iǎo m ěi @赛小美\n" +
+          "s ài x iǎo p éng @赛小彭\n" +
+          "s ài f ēng @赛丰\n" +
+          "s ài x iǎo y ǔ @赛小羽"
     };
   
     if (myConfig) {
