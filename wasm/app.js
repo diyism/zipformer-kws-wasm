@@ -108,12 +108,12 @@ if (navigator.mediaDevices.getUserMedia) {
       }
 
 
-      // let result = recognizer.getResult(recognizer_stream);
+      let result = recognizer.getResult(recognizer_stream);
+      console.log(result)
 
-
-      // if (result.length > 0 && lastResult != result) {
-      //   lastResult = result;
-      // }
+      if (result.length > 0 && lastResult != result) {
+        lastResult = result;
+      }
 
       // if (isEndpoint) {
       //   if (lastResult.length > 0) {
