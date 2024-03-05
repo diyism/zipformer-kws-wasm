@@ -31,9 +31,6 @@ function getDisplayResult() {
     i += 1;
   }
 
-  if (lastResult.length > 0) {
-    ans += '' + i + ': ' + lastResult + '\n';
-  }
   return ans;
 }
 
@@ -111,18 +108,11 @@ if (navigator.mediaDevices.getUserMedia) {
       let result = recognizer.getResult(recognizer_stream);
       console.log(result)
 
-      if (result.length > 0) {
+      if (result.keyword.length > 0) {
         lastResult = result;
-        resultList.push(lastResult);
+        resultList.push(JSON.stringify(result));
       }
 
-      // if (isEndpoint) {
-      //   if (lastResult.length > 0) {
-      //     resultList.push(lastResult);
-      //     lastResult = '';
-      //   }
-      //   recognizer.reset(recognizer_stream);
-      // }
 
       textArea.value = getDisplayResult();
       textArea.scrollTop = textArea.scrollHeight;  // auto scroll
