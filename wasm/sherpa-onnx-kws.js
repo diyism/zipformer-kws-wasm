@@ -183,11 +183,10 @@ function freeConfig(config, Module) {
 
     getResult(stream) {
       let r = this.Module._GetOnlineStreamResult(this.handle, stream.handle);
-      let textPtr = this.Module.getValue(r, 'i8*');
-      let tokensPtr = this.Module.getValue(r, 'i8*');
-      let text = this.Module.UTF8ToString(textPtr);
+      let jsonPtr = this.Module.getValue(r + 20, 'i8*');
+      let json = this.Module.UTF8ToString(jsonPtr);
       this.Module._DestroyOnlineKwsResult(r);
-      return text;
+      return JSON.parse(json);
     }
   }
   
@@ -216,13 +215,7 @@ function freeConfig(config, Module) {
       numTrailingBlanks: 1,
       keywordsScore: 1.0,
       keywordsThreshold: 0.25,
-      keywords: "x iǎo s ài @小赛\n" +
-          "d ǎ k āi d ì t ú @打开地图\n" +
-          "d ǎ k āi k ōng t iáo @打开空调\n" +
-          "s ài x iǎo m ěi @赛小美\n" +
-          "s ài x iǎo p éng @赛小彭\n" +
-          "s ài f ēng @赛丰\n" +
-          "s ài x iǎo y ǔ @赛小羽"
+      keywords: "x iǎo s ài @小赛"
     };
   
     if (myConfig) {
