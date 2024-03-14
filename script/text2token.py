@@ -3,10 +3,6 @@ This script encode the texts (given line by line through `text`) to tokens and
 write the results to the file given by ``output``.
 
 Usage:
-If the tokens_type is bpe:
-
-If the tokens_type is cjkchar+bpe:
-
 python3 ./text2token.py \
           --text texts.txt \
           --tokens tokens.txt \
