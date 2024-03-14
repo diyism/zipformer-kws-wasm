@@ -4,7 +4,7 @@ const fs = require('fs');
 const {Readable} = require('stream');
 const wav = require('wav');
 
-const cyrinn_kws = require('cyrinn-kws');
+const cyrinn_kws = require('sherpa-kws');
 
 function createKeywordSpotter() {
     let transducerConfig = {

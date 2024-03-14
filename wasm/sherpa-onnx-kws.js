@@ -152,7 +152,7 @@ class Stream {
 
   free() {
     if (this.handle) {
-      this.Module._DestroyKeywordSpotterStrem(this.handle);
+      this.Module._DestroyOnlineKwsStream(this.handle);
       this.handle = null;
       this.Module._free(this.pointer);
       this.pointer = null;

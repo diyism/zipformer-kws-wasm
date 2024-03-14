@@ -1,5 +1,5 @@
 {
-  "name": "cyrinn-kws-node",
+  "name": "sherpa-kws",
   "version": "0.0.1",
   "description": "KeywordSpotter without internet connection",
   "main": "index.js",

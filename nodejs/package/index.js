@@ -1,6 +1,6 @@
 'use strict'
-const wasmModule = require('./cyrinn-wasm-nodejs.js')();
-const sherpa_onnx_kws = require('./cyrinn-kws.js');
+const wasmModule = require('./sherpa-onnx-wasm-nodejs.js')();
+const sherpa_onnx_kws = require('./sherpa-onnx-kws.js');
 
 
 function createKeywordSpotter(config) {
