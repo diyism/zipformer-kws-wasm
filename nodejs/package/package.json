@@ -1,0 +1,18 @@
+{
+  "name": "cyrinn-kws-node",
+  "version": "0.0.1",
+  "description": "KeywordSpotter without internet connection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "KWS",
+    "KeywordSpotter",
+    "WebAssembly",
+    "wasm"
+  ],
+  "author": "lingfanzeng",
+  "dependencies": {
+  }
+}
