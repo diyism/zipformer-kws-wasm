@@ -12,27 +12,27 @@ generate from https://github.com/k2-fsa/sherpa-onnx
 ## 1. Nodejs Quick Start
 
 ```bash
-git clone https://gitqh.cyagen.net/lingfanzeng/cyrinn-kws.git
-cd cyrinn-kws
+git clone https://github.com/lovemefan/zipformer-kws-wasm.git
+cd zipformer-kws-wasm
 npm i ./cyrinn-kws-package
 npm i wav
 cd example && node test-nodejs-kws.js
 ```
 
-## Browser Quick Start
+## 2. Browser Quick Start
 
 you can use nodejs or nginx to build static web-server
 
 here is a nodejs example
 
 ```bash
-git clone https://gitqh.cyagen.net/lingfanzeng/cyrinn-kws.git
-cd cyrinn-kws
+git clone https://github.com/lovemefan/zipformer-kws-wasm.git
+cd zipformer-kws-wasm
 npm -g i http-server
 http-server wasm -p 3000
 ```
 
-## 2. Customizing Wake-up Words
+## 3. Customizing Wake-up Words
 
 Use a Python script to generate the keywords file and place it in the example/assets folder.
 One Chinese keyword per line in texts.txt is sufficient.
