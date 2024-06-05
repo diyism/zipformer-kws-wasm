@@ -227,9 +227,9 @@ class Kws {
 
 function createKws(Module, myConfig) {
   let transducerConfig = {
-    encoder: './encoder-epoch-12-avg-2-chunk-16-left-64.onnx',
-    decoder: './decoder-epoch-12-avg-2-chunk-16-left-64.onnx',
-    joiner: './joiner-epoch-12-avg-2-chunk-16-left-64.onnx',
+    encoder: './encoder-epoch-20-avg-2-chunk-16-left-128.onnx',
+    decoder: './decoder-epoch-20-avg-2-chunk-16-left-128.onnx',
+    joiner: './joiner-epoch-20-avg-2-chunk-16-left-128.onnx',
   }
   let modelConfig = {
     transducer: transducerConfig,
@@ -248,12 +248,21 @@ function createKws(Module, myConfig) {
   let configObj = {
     featConfig: featConfig,
     modelConfig: modelConfig,
-    maxActivePaths: 4,
+    maxActivePaths: 5,
     numTrailingBlanks: 1,
     keywordsScore: 1.0,
     keywordsThreshold: 0.25,
-    keywords: "x iǎo ài t óng x ué @小爱同学\n" +
-        "j ūn g ē n iú b ī @军哥牛逼"
+    keywords:
+        "n ǐ h ǎo j iǎng g ǔ r én @你好讲古人\n" +
+        // "n ǐ h ǎo @你好\n" +
+        // "l éi h óu g ǒng g ǔ z ǎi @雷猴拱股仔\n" +
+        "n éih h óu  g óng g ú z ái @你好講古仔\n" +
+        "b ō f àng sh ì p ín @播放视频\n" +
+        "g uān b ì sh ì p ín @关闭视频\n" +
+        "g uān b ì d uì h uà @关闭对话\n"
+        // // "n éi h óu g óng g ú y èn @你好講古人\n" +
+        // "n éi h óu g óng g ú z ái @你好講古仔\n" +
+        // "l éi h óu g ǒng g ǔ z ǎi @雷猴拱鼓仔"
   };
 
   if (myConfig) {

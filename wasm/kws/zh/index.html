@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Next-gen Kaldi WebAssembly with sherpa-onnx for kws</title>
+  <title>WebAssembly for kws</title>
   <style>
     h1,div {
       text-align: center;
@@ -17,8 +17,17 @@
 <body>
   <h1>
     WebAssembly<br/>
-    Kws Demo with <a href="https://github.com/k2-fsa/sherpa-onnx">sherpa-onnx</a>
+    Kws Demo
   </h1>
+  <h2>
+    支持以下唤醒词：
+    <br/>
+    1. 你好讲古人
+    2. 雷猴拱股仔（你好讲古仔）
+    3. 播放视频
+    4. 关闭视频
+    5. 关闭对话
+  </h2>
   <div>
     <span id="hint">Loading model ... ...</span>
     <br/>
@@ -30,7 +39,6 @@
     <br/>
     <textarea id="results" rows="10" readonly></textarea>
   </div>
-
   <section flex="1" overflow="auto" id="sound-clips">
   </section>
 

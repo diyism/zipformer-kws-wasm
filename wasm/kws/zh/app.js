@@ -79,7 +79,7 @@ if (navigator.mediaDevices.getUserMedia) {
 
     // https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createScriptProcessor
     // bufferSize: the onaudioprocess event is called when the buffer is full
-    var bufferSize = 4096;
+    var bufferSize = 256;
     var numberOfInputChannels = 1;
     var numberOfOutputChannels = 2;
     if (audioCtx.createScriptProcessor) {
