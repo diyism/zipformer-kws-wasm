@@ -6,6 +6,7 @@
     encoder-epoch-20-avg-2-chunk-16-left-128.onnx,
     joiner-epoch-20-avg-2-chunk-16-left-128.onnx,
     tokens.txt
+    可以试试自己拼接: decoder-epoch-99-avg-1-chunk-16-left-64.onnx, ...
 
 
 WebAssembly keyword spotting Demo with sherpa-onnx
